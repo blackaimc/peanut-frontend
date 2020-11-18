@@ -581,12 +581,6 @@ input, select, textarea {
 		margin: 0 0 1rem 0;
 	}
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	input[type="tel"],
-	input[type="search"],
-	input[type="url"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -3231,7 +3225,7 @@ input, select, textarea {
 		-ms-justify-content: center;
 		justify-content: center;
 		position: relative;
-		width: 350px;
+		width: 300px;
 		background-color: transparent;
 	}
 
@@ -3546,36 +3540,7 @@ input, select, textarea {
 			color: #ffffff !important;
 		}
 
-			
-
-
-		.gallery.style2 > .forward, .gallery.style2 > .backward {
-			text-decoration: none;
-			-moz-transition: opacity 0.2s ease-in-out;
-			-webkit-transition: opacity 0.2s ease-in-out;
-			-ms-transition: opacity 0.2s ease-in-out;
-			transition: opacity 0.2s ease-in-out;
-			position: absolute;
-			top: 0;
-			width: 300px;
-			height: 300px;
-			cursor: pointer;
-			opacity: 0;
-			z-index: 2;
-		}
-
-			.gallery.style2 > .forward:before, .gallery.style2 > .backward:before {
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased;
-				display: inline-block;
-				font-style: normal;
-				font-variant: normal;
-				text-rendering: auto;
-				line-height: 1;
-				text-transform: none !important;
-				font-family: 'Font Awesome 5 Free';
-				font-weight: 900;
-			}
+		
 
 			
 
@@ -3602,7 +3567,6 @@ input, select, textarea {
 			position: relative;
 			overflow: hidden;
 			width: 25%;
-			max-width: 175vw;
 		}
 
 			.gallery.style2 article .image {
@@ -3673,10 +3637,11 @@ input, select, textarea {
 				opacity: 1;
 			}
 
-		@media screen and (max-width: 980px) {
-
+		@media screen and (max-width: 1000px) {
+			
 			.gallery.style2 article .caption {
 				padding: 2rem;
+				font-size : 0.1rem;
 			}
 
 		}
@@ -3685,6 +3650,7 @@ input, select, textarea {
 
 			.gallery.style2 article .caption {
 				padding: 2rem;
+				font-size : xx-small;
 			}
 
 		}
@@ -3709,6 +3675,7 @@ input, select, textarea {
 
 			.gallery.style2.small article .caption {
 				padding: 2rem;
+				font-size : xx-small;	
 			}
 
 		}

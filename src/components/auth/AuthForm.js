@@ -5,7 +5,8 @@ import palette from '../../lib/styles/palette';
 import Button from '../common/Button';
 
 const AuthFormBlock = styled.div`
-  h3 {
+  .h3-block {
+    text-decoration: none;
     margin: 0;
     color: ${palette.gray[8]};
     margin-bottom: 1rem;
@@ -16,6 +17,7 @@ const AuthFormBlock = styled.div`
  * 스타일링된 input
  */
 const StyledInput = styled.input`
+  text-decoration: none;
   font-size: 1rem;
   border: none;
   border-bottom: 1px solid ${palette.gray[5]};
@@ -23,6 +25,8 @@ const StyledInput = styled.input`
   outline: none;
   width: 100%;
   &:focus {
+    border: none;
+    outline : none;
     color: $oc-teal-7;
     border-bottom: 1px solid ${palette.gray[7]};
   }
@@ -39,7 +43,7 @@ const Footer = styled.div`
   text-align: right;
   a {
     color: ${palette.gray[6]};
-    text-decoration: underline;
+    text-decoration: none;
     &:hover {
       color: ${palette.gray[9]};
     }
@@ -59,11 +63,11 @@ const AuthForm = ({type, form, onChange, onSubmit}) => {
     console.log(text);
     return(
         <AuthFormBlock>
-            <h3>{text}</h3>
+            <h3 className = "h3-block">{text}</h3>
             <form onSubmit = {onSubmit}>
                 <StyledInput autoComplete = "username" name = "username" placeholder = "아이디" onChange = {onChange} value = {form.username} />
                 <StyledInput autoComplete = "new-password" name = "password" placeholder = "비밀번호" type = "password" onChange = {onChange} value = {form.password}/>
-                {type === 'register' && (
+                {type === 'register' && ( 
                     <StyledInput autoComplete = "new-password" name = "password" placeholder = "비밀번호 확인" type = "password" onChange = {onChange} value = {form.password}/>
                 )}
                 <ButtonWithMarginTop cyan fullWidth>{text}</ButtonWithMarginTop>

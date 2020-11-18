@@ -4,28 +4,32 @@ import '../assets/css/main.css'
 import '../assets/css/noscript.css'
 
 const Introduce = () => {
+	const teamButton = "더 알아보기";
     return(
         <div class="is-preload">
 			<div id="wrapper" class="divided">
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
-							<h2>팀 땅콩에 오신 것을 환영합니다</h2>
-							<p>내용</p>
+							<h2>Team Peanut</h2>
+							<p>재밌는 디스코드 경험을 해보시고 싶으신가요? <br/>그 여정에 저희 TEAM 땅콩이 함께 하고 싶습니다!</p>
+							<p>-팀 땅콩 대표 땅콩</p>
 							<ul class="actions stacked">
-								<Link to = '/login'><li><a class="button">Learn More</a></li></Link>
+								<Link to = '/login'><li><a class="button">로그인</a></li></Link>
+								<li><a class = "button" href = "https://discord.gg/Cp5jduJZMn" target = "_blank">팀 땅콩 유저 커뮤니티</a></li>
 							</ul>
 						</div>
-						<div class="image">
+						<div className="image">
 							<img src="https://cdn.pixabay.com/photo/2016/02/22/08/29/scenery-1214950_960_720.jpg" alt="" />
 						</div>
 					</section>
 
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<h2>제목</h2>
-							<p>내용</p>
+							<h2>비엔나 봇</h2>
+							<p>기능이 너무 다양해서 무엇을 하는 봇인지 궁금할 정도의 봇</p>
 							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
+								<li><a class="button">소개보기</a></li>
+								<li><button class="button" onClick = {() => alert("제작 중인 시스템입니다")}>제작중</button></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -35,14 +39,15 @@ const Introduce = () => {
 
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<h2>제목</h2>
-							<p>내용</p>
+							<h2>일정관리 봇(이름을 지어주세요)</h2>
+							<p>팀 땅콩이 프로젝트를 수행하면서 만든 일정관리 봇입니다</p>
 							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
+								<li><a class="button">소개 보기</a></li>
+								<li><a class="button">봇 초대하기</a></li>
 							</ul>
 						</div>
 						<div class="image">
-							<img src="https://cdn.pixabay.com/photo/2016/02/22/08/29/scenery-1214950_960_720.jpg" alt="" />
+							<img src="https://cdn.pixabay.com/photo/2016/02/22/08/29/scenery-1214950_960_720.jpg" />
 						</div>
 					</section>
 
@@ -56,50 +61,50 @@ const Introduce = () => {
 							<p>평범하게 봇을 개발하는 팀입니다</p>
 							<div class="gallery style2 medium onscroll-fade-in">
 								<article>
-									<a href="images/gallery/fulls/01.jpg" class="image">
+									<a href="https://github.com/jjun4341" class="image">
 										<img src="https://cdn.discordapp.com/avatars/443734180816486441/b87bc59fe1a1de7da5756a557760b2c4.webp?size=256" alt="" />
 									</a>
 									<div class="caption">
 										<h3>땅콩(PM)</h3>
-										<p>저는 착하고 친절한 학생 개발자인 <br/> 팀 땅콩 대표, 땅콩입니다.</p>
+										<p>저는 착하고(?) 친절한(??) 학생 <br />개발자인 팀 땅콩 대표, 땅콩입니다.</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
+											<li><span class="button small">{teamButton}</span></li>
 										</ul>
 									</div>
 								</article>
 								<article >
-									<a href="images/gallery/fulls/01.jpg" class="image">
+									<a href="https://github.com/JiYeong11" class="image">
 										<img src="https://cdn.discordapp.com/avatars/557119176590884864/a_2a5e3920ad489064f2b50630ce050ab1.gif?size=256" alt="" />
 									</a>
 									<div class="caption">
 										<h3>지영</h3>
 										<p>파이썬을 다루는 폐인입니다</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
+											<li><span class="button small">{teamButton}</span></li>
 										</ul>
 									</div>
 								</article>
 								<article>
-									<a href="images/gallery/fulls/01.jpg" class="image">
-										<img src="https://cdn.discordapp.com/avatars/594183416266752000/3cfca924b740a37961c4f50e00ff58c5.webp?size=256" alt="" />
+									<a href="https://github.com/bangsejun" class="image">
+										<img src="https://media.discordapp.net/attachments/754181625776046146/778546208780058624/emote-6.png?width=677&height=677" alt="" />
 									</a>
 									<div class="caption">
 										<h3>방세준</h3>
-										<p>뭐 다하고싶은 학생입니다..</p>
+										<p>뭐 다 하고싶은 빵</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
+											<li><span class="button small">{teamButton}</span></li>
 										</ul>
 									</div>
 								</article>
 								<article>
-									<a href="images/gallery/fulls/01.jpg" class="image">
+									<a href="https://github.com/ensuta" class="image">
 										<img src="https://cdn.discordapp.com/avatars/401532480278102027/19ddf68d07bc666121cf62dcda95f761.webp?size=256" alt="" />
 									</a>
 									<div class="caption">
 										<h3>ensuta</h3>
-										<p>(잠수중...)</p>
+										<p>해커, 보안담당데스요</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
+											<li><span class="button small">{teamButton}</span></li>
 										</ul>
 									</div>
 								</article>
@@ -114,8 +119,8 @@ const Introduce = () => {
 										<img src="" alt="" />
 									</a>
 									<div class="caption">
-										<h3>파랑(PM)</h3>
-										<p>10덕 입니다</p>
+										<h3>파랑 - Back</h3>
+										<p>치노를 좋아하는 10덕입니다</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -123,13 +128,13 @@ const Introduce = () => {
 								</article>
 								<article >
 									<a href="images/gallery/fulls/01.jpg" class="image">
-										<img src="" alt="" />
+										<img src="https://imgur.com/M0KveU6.jpg" alt="" />
 									</a>
 									<div class="caption">
-										<h3>호두과자</h3>
-										<p>규카츠 먹고 싶다</p>
+										<h3>호두과자 - Front</h3>
+										<p>규카츠 먹고 싶은 프론트앤드 <br/> 개발자입니다.</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
+											<li><span class="button small">{teamButton}</span></li>
 										</ul>
 									</div>
 								</article>
@@ -138,10 +143,10 @@ const Introduce = () => {
 										<img src="https://cdn.discordapp.com/avatars/727486102587310102/f4a4d45699340eadb24645e7c1e6787e.webp?size=128" alt="" />
 									</a>
 									<div class="caption">
-										<h3>냐코</h3>
-										<p>냐코는 잼입니다</p>
+										<h3>냐코 - Design</h3>
+										<p>냐코는 노잼입니다!</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
+											<li><span class="button small">{teamButton}</span></li>
 										</ul>
 									</div>
 								</article>
@@ -150,10 +155,10 @@ const Introduce = () => {
 										<img src="https://cdn.discordapp.com/avatars/761220557160579102/f9c3ff32acee89d115a187274eccffda.webp?size=128" alt="" />
 									</a>
 									<div class="caption">
-										<h3>꼬빈</h3>
+										<h3>꼬빈 - Design</h3>
 										<p>여친 구합니다 ㅜㅜ</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
+											<li><span class="button small">{teamButton}</span></li>
 										</ul>
 									</div>
 								</article>
@@ -164,8 +169,7 @@ const Introduce = () => {
 
 					<footer class="wrapper style1 align-center">
 						<div class="inner">
-							<p>Team peanut.</p>
-							<span class="button small"><a href = "#">위로 올라가기</a></span>
+							<p>Footer 제작중...</p>
 						</div>
 					</footer>
                 

@@ -19,18 +19,24 @@ const StyledButton = styled.button`
     ${props =>
         props.fullWidth &&
         css`
-            padding-top : 0.75rem;
-            padding-bottom : 0.75rem;
+            padding-top : 1.25rem;
+            padding-bottom : 1.25rem;
             width : 100%;
+            height : 1%;
+            outline : none;
+            line-height : 50%;
             font-size : 1.125rem;
+            color : white;
         `
     }
     ${props =>
         props.cyan &&
         css`
             background : ${palette.cyan[5]};
+            color : white;
             &:hover{
                 background : ${palette.cyan[4]};
+                color : white;
             }
         `}
     `;    

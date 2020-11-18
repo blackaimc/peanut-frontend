@@ -16,23 +16,30 @@ const AuthTemplateBlock = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+  text-align : center;
 `;
 
 
 const WhiteBox = styled.div`
+
     .logo-area{
+        text-align : center;
         display : block;
         padding-bottom : 2rem;
         text-align : center;
         font-weight : bold;
         letter-spacing : 2px;
+        text-decoration: none;
     }
     box-shadow : 0 0 8px rgba(0, 0, 0, 0.025);
     padding : 2rem;
-    width : 360px;
+    width : 420px;
     background : white;
     border-radius : 2px;
+    text-decoration: none;
 `
+
 const AuthTemplate = ({children}) => {
     return(
         <AuthTemplateBlock>
