@@ -1,14 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/css/main.css'
-import '../assets/css/noscript.css'
 
 const Introduce = () => {
 	const teamButton = "더 알아보기";
     return(
         <div class="is-preload">
 			<div id="wrapper" class="divided">
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+					<section class="spotlight style1 orient-right content-align-left image-position-center" id="first">
 						<div class="content">
 							<h2>Team Peanut</h2>
 							<p>재밌는 디스코드 경험을 해보시고 싶으신가요? <br/>그 여정에 저희 TEAM 땅콩이 함께 하고 싶습니다!</p>
@@ -23,10 +22,10 @@ const Introduce = () => {
 						</div>
 					</section>
 
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+					<section class="spotlight style1 orient-left content-align-left image-position-center">
 						<div class="content">
 							<h2>비엔나 봇</h2>
-							<p>기능이 너무 다양해서 무엇을 하는 봇인지 궁금할 정도의 봇</p>
+							<p>기능이 너무 다양해서 <br/>무엇을 하는 봇인지 궁금할 정도의 봇</p>
 							<ul class="actions stacked">
 								<li><a class="button">소개보기</a></li>
 								<li><button class="button" onClick = {() => alert("제작 중인 시스템입니다")}>제작중</button></li>
@@ -37,10 +36,11 @@ const Introduce = () => {
 						</div>
 					</section>
 
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<section class="spotlight style1 orient-right content-align-left image-position-center">
 						<div class="content">
-							<h2>일정관리 봇(이름을 지어주세요)</h2>
+							<h2>일정관리 봇</h2>
 							<p>팀 땅콩이 프로젝트를 수행하면서 만든 일정관리 봇입니다</p>
+							<p>(이름을 지어주세요)</p>
 							<ul class="actions stacked">
 								<li><a class="button">소개 보기</a></li>
 								<li><a class="button">봇 초대하기</a></li>
