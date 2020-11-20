@@ -82,6 +82,7 @@ input, select, textarea {
 
 	html {
 		box-sizing: border-box;
+		
 	}
 
 	*, *:before, *:after {
@@ -127,7 +128,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			html {
-				font-size: 11pt;
+				font-size: 2pt;
 			}
 
 		}
@@ -191,6 +192,10 @@ input, select, textarea {
 			color: inherit;
 			text-decoration: none;
 		}
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
 
 	h1 {
 		font-size: 3.5rem;
@@ -198,15 +203,15 @@ input, select, textarea {
 	}
 
 	h2 {
-		font-size: 2.25rem;
+		font-size: 2.75rem;
 	}
 
 	h3 {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 
 	h4 {
-		font-size: 1.1rem;
+		font-size: 1.5rem;
 	}
 
 	h5 {
@@ -282,8 +287,9 @@ input, select, textarea {
 
 	@media screen and (max-width: 736px) {
 
-		p.major {
+		p {
 			font-size: 1.1rem;
+			margin : 12px;
 		}
 
 		h1 {
@@ -299,7 +305,31 @@ input, select, textarea {
 		}
 
 		h4 {
-			font-size: 1rem;
+			font-size: 1.2rem;
+		}
+
+	}
+	@media screen and (max-width: 400px) {
+
+		p {
+			font-size: 0.001rem;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+		}
+
+		h4 {
+			font-size: 1.2rem;
+			font-weight: bold;
 		}
 
 	}
@@ -362,13 +392,22 @@ input, select, textarea {
 		white-space: nowrap;
 		font-size: 0.75rem;
 		max-width: 20rem;
-		height: 3.75em;
+		height: 3.75rem;
 		line-height: 3.75em;
 		border-radius: 3.75em;
 		padding: 0 2.5em;
 		text-overflow: ellipsis;
 		overflow: hidden;
 	}
+	@media screen and (max-width: 400px) {
+
+		button,
+		.button{
+			height : 15rem;
+		}
+
+	}
+
 
 		input[type="submit"].icon:before,
 		input[type="reset"].icon:before,
@@ -392,10 +431,10 @@ input, select, textarea {
 		button.small,
 		.button.small {
 			font-size: 0.6rem;
-			height: 3.325em;
+			height: 3.325rem;
 			line-height: 3.325em;
 			border-radius: 3.325em;
-			padding: 0 2em;
+			padding: 0.2em;
 		}
 
 		input[type="submit"].large,
@@ -404,7 +443,7 @@ input, select, textarea {
 		button.large,
 		.button.large {
 			font-size: 0.8rem;
-			height: 4em;
+			height: 2.5rem;
 			line-height: 4em;
 			border-radius: 4em;
 			padding: 0 3em;
@@ -3400,12 +3439,13 @@ input, select, textarea {
 /* Gallery (style2) */
 
 	.gallery.style2 {
-		background-color: #000000;
 		color: #ffffff;
 		display: flex;
 		-webkit-overflow-scrolling: touch;
 		position: relative;
 		background-color: transparent;
+		
+		background-color: #171A21;
 	}
 
 		.gallery.style2 input, .gallery.style2 select, .gallery.style2 textarea {
@@ -3449,14 +3489,9 @@ input, select, textarea {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 1px white;
 			color: #ffffff !important;
+			height : 2rem;
+			width : 5rem; 
 		}
-
-		
-
-			
-
-		
-
 		.gallery.style2 > .inner {
 			display: inherit;
 			overflow-x: auto;
@@ -3563,11 +3598,22 @@ input, select, textarea {
 				padding: 2rem;
 				font-size : xx-small;
 			}
-
+			.gallery.style2 input[type="submit"],
+			.gallery.style2 input[type="reset"],
+			.gallery.style2 input[type="button"],
+			.gallery.style2 button,
+			.gallery.style2 .button {
+				background-color: transparent;
+				box-shadow: inset 0 0 0 1px white;
+				color: #ffffff !important;
+				height : 7.5rem;
+				line-height: 7.5rem;
+			}
 		}
 
 		.gallery.style2.small article {
 			width: 17.5rem;
+			
 		}
 
 			.gallery.style2.small article .caption {
@@ -4027,5 +4073,3 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
-
-
