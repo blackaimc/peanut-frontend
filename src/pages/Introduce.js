@@ -11,7 +11,7 @@ const Master = styled.h3`
 const Introduce = () => {	
 	const random = (min, max) => {
 		min = Math.ceil(min);
-		max = Math.floor(max);
+		max = Math.floor(max);	
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 	const easterEgg = random(1, 100000);
@@ -26,7 +26,8 @@ const Introduce = () => {
 							<p>-팀 땅콩 대표 땅콩</p>
 							<ul class="actions stacked">
 							<Link to = '/login'><li><button className="button">로그인</button></li></Link>
-							{easterEgg > 1 ? (<li><button className = "button" href = "https://discord.gg/Cp5jduJZMn" target = "_blank">팀 땅콩 유저 커뮤니티</button></li>):(<a href = "https://team-peanut.vercel.app/" rel = "noreferrer" target = "_blank"><li><button className="button">비공식 사이트 가기</button></li></a>)}
+							{easterEgg > 1 ? (<li><a className = "button" href = "https://discord.gg/Cp5jduJZMn" target = "_blank">팀 땅콩 유저 커뮤니티</a></li>)
+							:(<a href = "https://team-peanut-unofficial.piko.ml/" rel = "noreferrer" target = "_blank"><li><button className="button">비공식 사이트 가기</button></li></a>)}
 							</ul>
 						</div>
 						<div className="image">
@@ -77,7 +78,7 @@ const Introduce = () => {
 									</a>
 									<div className="caption">
 										<Master className = "PM" style = {{color : "gold"}}>땅콩(PM)</Master>
-										<p>학생 개발자이자 대표, 땅콩입니다.</p>
+										<p>학생 개발자이자 팀 대표, 땅콩입니다.</p>
 										<ul className ="actions fixed">
 											<li><span className ="button small">{teamButton}</span></li>
 										</ul>
