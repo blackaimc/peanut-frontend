@@ -9,14 +9,13 @@ const Master = styled.div`
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
 
 
-* {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-}
+
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -4088,7 +4087,7 @@ const Introduce = () => {
 	const easterEgg = random(1, 100000);
 	const teamButton = "더 알아보기";
     return(
-        <div class="is-preload">
+        <div className="is-preload">
 			<div id="wrapper" class="divided">
 					<section class="spotlight style1 orient-right content-align-left image-position-center" id="first">
 						<div class="content">
@@ -4097,8 +4096,8 @@ const Introduce = () => {
 							<p>-팀 땅콩 대표 땅콩</p>
 							<ul class="actions stacked">
 							<Link to = '/login'><li><button className="button">로그인</button></li></Link>
-							{easterEgg > 1 ? (<li><a className = "button" href = "https://discord.gg/Cp5jduJZMn" target = "blank">팀 땅콩 유저 커뮤니티</a></li>)
-							:(<a href = "https://team-peanut-unofficial.piko.ml/" rel = "noreferrer" target = "blank"><li><button className="button">비공식 사이트 가기</button></li></a>)}
+							{easterEgg > 1 ? (<li><button className = "button" onClick = {window.open("https://discord.gg/Cp5jduJZMn")} target = "blank">팀 땅콩 유저 커뮤니티</button></li>)
+							:(<li><button rel = "noreferrer" target = "blank" onClick={window.open("https://team-peanut-unofficial.piko.ml/")} className="button">비공식 사이트 가기</button></li>)}
 							</ul>
 						</div>
 						<div className="image">

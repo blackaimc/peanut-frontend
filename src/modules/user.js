@@ -1,7 +1,6 @@
 import {createAction, handleActions} from 'redux-actions';
-import {takeLateset} from 'redux-saga/effects';
+import {takeLatest} from 'redux-saga/effects';
 import * as authAPI from '../lib/api/auth';
-import { createRequestActionTypes } from '../lib/createRequestSaga';
 import createRequestSaga, { createRequestActionTypes } from '../lib/createRequestSaga';
 
 const TEMP_SET_USER = 'user/TEMP_SET_USER';
@@ -14,7 +13,7 @@ export const check = createAction(CHECK);
 
 const checkSaga = createRequestSaga(CHECK, authAPI.check);
 export function* userSaga(){
-    yield takeLateset(CHECK, checkSaga);
+    yield takeLatest(CHECK, checkSaga);
 }
 
 const initalState = {
@@ -28,7 +27,16 @@ export default handleActions(
             ...state,
             user,
         }),
-        [CHECK_SUCCESS] : (state, {payload : user})
+        [CHECK_SUCCESS] : (state, {payload : user}) => ({
+            ...state,
+            user,
+            checkError : null,
+        }),
+        [CHECK_FAILURE] : (state, {payload:error}) => ({
+            ...state,
+            user : null,
+            checkError : error,
+        }),
     },
     initalState
 )
