@@ -41,6 +41,7 @@ const StyledInput = styled.input`
 const Footer = styled.div`
   margin-top: 2rem;
   text-align: right;
+  font-size : 15px;
   a {
     color: ${palette.gray[6]};
     text-decoration: none;

@@ -393,7 +393,7 @@ input, select, textarea {
 		font-size: 0.75rem;
 		max-width: 20rem;
 		height: 3.75rem;
-		line-height: 5em;
+		line-height: 5xem;
 		border-radius: 3.75em;
 		padding: 0 2.5em;
 		text-overflow: ellipsis;
