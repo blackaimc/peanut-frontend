@@ -31,6 +31,36 @@ const Space = styled.div`
     height : 4rem;
 `;
 
+const Button = styled.button`
+
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #4cdded;
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    align-items: center;
+    display: inline-block;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 1;
+    border: none;
+    box-shadow: 0 2px 2px rgba(0, 79, 255, 0.3);
+    transition: 0.5s;
+
+
+&:hover{
+    background-color: #174c52;
+    box-shadow: 0;
+    color: #d4d4d4;
+    font-weight: lighter;
+}
+
+&:focus{
+    outline : none;
+}
+`;
+
 const Header = ({user, onLogout}) => {
     return(
         <>
@@ -39,12 +69,12 @@ const Header = ({user, onLogout}) => {
                     <Link to = "/" className = "logo">Team Peanut</Link>
                     {user ? (
                         <div className = "right">
-                            <button onClick={onLogout}>로그아웃</button>
+                            <Button onClick={onLogout}>로그아웃</Button>
                         </div>
                     ):
                     (              
                         <div className = "right">
-                            <Link to = "/login"><button>로그인</button></Link>
+                            <Link to = "/login"><Button>로그인</Button></Link>
                         </div>
                     )}
                 </Wraper>
