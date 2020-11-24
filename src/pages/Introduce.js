@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import '../assets/css/Animate.css'
 import '../assets/css/main.css'
 import StyledText from  '../assets/js/AnimatedText'
+import HeaderContainer from '../containers/common/HeaderContainer'
 
 const Master = styled.div`
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
@@ -4087,17 +4088,19 @@ const Introduce = () => {
 	const easterEgg = random(1, 100000);
 	const teamButton = "더 알아보기";
     return(
+		
         <div className="is-preload">
-			<div id="wrapper" class="divided">
-					<section class="spotlight style1 orient-right content-align-left image-position-center" id="first">
-						<div class="content">
+			<HeaderContainer/>
+			<div id="wrapper" className="divided">
+					<section className="spotlight style1 orient-right content-align-left image-position-center" id="first">
+						<div className="content">
 							<h2>Team Peanut</h2>
 							<p>재밌는 디스코드 경험을 해보시고 싶으신가요? <br/>그 여정에 저희 TEAM 땅콩이 함께 하고 싶습니다!</p>
 							<p>-팀 땅콩 대표 땅콩</p>
-							<ul class="actions stacked">
+							<ul className="actions stacked">
 							<Link to = '/login'><li><button className="button">로그인</button></li></Link>
-							{easterEgg > 1 ? (<li><button className = "button" onClick = {window.open("https://discord.gg/Cp5jduJZMn")} target = "blank">팀 땅콩 유저 커뮤니티</button></li>)
-							:(<li><button rel = "noreferrer" target = "blank" onClick={window.open("https://team-peanut-unofficial.piko.ml/")} className="button">비공식 사이트 가기</button></li>)}
+							{easterEgg > 1 ? (<li><a className = "button" href = "https://discord.gg/Cp5jduJZMn" target = "blank">팀 땅콩 유저 커뮤니티</a></li>)
+							:(<a href = "https://team-peanut-unofficial.piko.ml/" rel = "noreferrer" target = "blank"><li><button className="button">비공식 사이트 가기</button></li></a>)}
 							</ul>
 						</div>
 						<div className="image">
@@ -4198,7 +4201,7 @@ const Introduce = () => {
 								
 								<article >
 									<a href="images/gallery/fulls/01.jpg" className = "image">
-										<img src="ttps://cdn.discordapp.com/avatars/628595345798201355/a_981b316e32a0945fe327b506dcb72a11.gif?size=256" alt="" />
+										<img src="https://cdn.discordapp.com/avatars/628595345798201355/a_981b316e32a0945fe327b506dcb72a11.gif?size=256" alt="" />
 									</a>
 									<div className = "caption">
 										<h3>파랑 - Back</h3>
@@ -4209,7 +4212,7 @@ const Introduce = () => {
 									</div>
 								</article>
 								<article >
-									<a href="images/gallery/fulls/01.jpg" class="image">
+									<a href="images/gallery/fulls/01.jpg" className="image">
 										<img src="https://imgur.com/M0KveU6.jpg" alt="" />
 									</a>
 									<div className ="caption">
