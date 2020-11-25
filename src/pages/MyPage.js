@@ -1,7 +1,15 @@
 import React from 'react';
+import Editor from '../components/write/Editor';
+import TagBox from '../components/write/TagBox';
+import Responsive from '../components/common/Responsive';
 
 const MyPage = () => {
-    return <div>마이페이지</div>
+    return(
+        <Responsive>
+            <Editor />
+            <TagBox/>
+        </Responsive>
+    )
 }
 
 export default MyPage;

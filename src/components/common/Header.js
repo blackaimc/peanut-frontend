@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Responsive from './Responsive';
-import '../../assets/css/main.css';
+import './Header.css';
 import {Link} from 'react-router-dom';
 
 const HeaderBlock = styled.div`

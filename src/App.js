@@ -18,7 +18,7 @@ function App() {
       <Route component = {Regiser} path = '/register' />
       <Route component = {List} path = '/List' />
       <Route component = {UpdateLog} path = '/@username:postId' />
-      <Route component = {MyPage} path = '/:@username'/>
+      <Route component = {MyPage} path = '/write'/>
       <Route component = {EasterGaram} path = '/abc1203928392898993310dhfuhfauafhua123932919dhj1h2hj32j'/>
       
     </>
