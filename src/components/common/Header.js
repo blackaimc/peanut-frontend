@@ -20,11 +20,16 @@ const Wraper = styled(Responsive)`
         font-size : 1.125rem;
         font-width : 800;
         letter-spacing : 2px;
+        font-family: 'CookieRunOTF-Black';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Black00.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
     }
     .right{
         display : flex;
         align-items : center;
     }
+
 `;
 
 const Space = styled.div`

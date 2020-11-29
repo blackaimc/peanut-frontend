@@ -6,7 +6,7 @@ import Regiser from './pages/Register'
 import Introduce from './pages/Introduce'
 import List from './pages/List'
 import UpdateLog from './pages/UpdateLog'
-import MyPage from './pages/MyPage'
+import MyPage from './pages/writePage'
 import EasterGaram from './pages/Eastergaram';
 
 

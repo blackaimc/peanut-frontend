@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useCallback} from 'react';
 import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
 
@@ -32,17 +32,16 @@ const Input = styled.input`
     font-size : 1rem;
 `;
 const Button = styled.button` 
+    width : 100px;
     text-align : center;
     color : white;
     outline : none;
     border : none;
     font-size : 1rem;
     cursor : pointer;
-    padding-left : 1rem;
     border : none;
     background : ${palette.gray[8]};
     color : white;
-    font-weight : bold;
     &:hover{
         background : ${palette.gray[6]};
     }
@@ -63,25 +62,59 @@ const TagListBlock = styled.div`
     margin-top : 0.5rem;
 `;
 
-const TagItem = React.memo(({tag}) => <Tag>#{tag}</Tag>);
+const TagItem = React.memo(({tag, onRemove}) =>(
+     <Tag onClick = {()=> onRemove(tag)}>#{tag}</Tag>
+));
 
-const TagList = React.memo(({tags}) => (
+const TagList = React.memo(({tags, onRemove}) => (
     <TagListBlock>
         {tags.map(tag =>(
-            <TagItem key = {tag} tag = {tag} />
+            <TagItem key = {tag} tag = {tag} onRemove = {onRemove} />
         ))}
     </TagListBlock>
 ))
 
 const TagBox = () => {
+    const [input, setInput] = useState('');
+    const [localTags, setLocalTags] = useState([]);
+
+    const insertTag = useCallback(
+        tag => {
+            if(!tag) return;
+            if(localTags.includes(tag)) return;
+            setLocalTags([...localTags, tag]);    
+        },
+        [localTags]
+    );
+
+    const onRemove = useCallback(
+        tag => {
+            setLocalTags(localTags.filter(t => t !== tag));
+        },
+        [localTags]
+    );
+
+    const onChange = useCallback(e=> {
+        setInput(e.target.value)
+    }, []);
+
+    const onSubmit = useCallback(
+        e => {
+            e.preventDefault();
+            insertTag(input.trim());
+            setInput('');
+        },
+        [input, insertTag],
+    );
+
     return(
         <TagBoxBlock>
             <h4>태그</h4>
-            <TagForm>
-                <Input placeholder = "파랑이 바보"/>
+            <TagForm onSubmit={onSubmit}>
+                <Input placeholder = "태그를 넣으십쇼" value = {input} onChange = {onChange}/>
                 <Button type = "submit">추가</Button>
             </TagForm>
-            <TagList tags = {['땅콩', '지영', '파랑이', '호두과자', '방세준', '엔슈타', '냐코', '꼬빈']}/>
+            <TagList tags = {localTags} onRemove = {onRemove}/>
         </TagBoxBlock>
     )
 }

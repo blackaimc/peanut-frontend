@@ -1,13 +1,15 @@
 import React from 'react';
-import Editor from '../components/write/Editor';
 import TagBox from '../components/write/TagBox';
+import WriteActionButtons from '../components/write/WriteActionButtons'
 import Responsive from '../components/common/Responsive';
+import EditContainer from '../containers/write/EditContainer';
 
 const MyPage = () => {
     return(
         <Responsive>
-            <Editor />
+            <EditContainer />
             <TagBox/>
+            <WriteActionButtons/>
         </Responsive>
     )
 }

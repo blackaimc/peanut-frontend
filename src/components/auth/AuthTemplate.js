@@ -18,6 +18,7 @@ const AuthTemplateBlock = styled.div`
   align-items: center;
   text-decoration: none;
   text-align : center;
+
 `;
 
 
@@ -38,6 +39,7 @@ const WhiteBox = styled.div`
     background : white;
     border-radius : 2px;
     text-decoration: none;
+    
 `;
 
 

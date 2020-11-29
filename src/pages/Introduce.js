@@ -12,7 +12,10 @@ import HeaderContainer from '../containers/common/HeaderContainer'
 
 const Master = styled.div`
 
-
+	font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 	
 `;
 
@@ -39,9 +42,9 @@ const Introduce = () => {
 							<p>재밌는 디스코드 경험을 해보시고 싶으신가요? <br/>그 여정에 저희 TEAM 땅콩이 함께 하고 싶습니다!</p>
 							<p>-팀 땅콩 대표 땅콩</p>
 							<ul className="actions stacked">
-							<Link to = '/login'><li><button style = {style}>로그인</button></li></Link>
-							{easterEgg > 1 ? (<a href = "https://discord.gg/Cp5jduJZMn" target = "blank"><button>팀 땅콩 유저 커뮤니티</button></a>)
-							:(<a href = "https://team-peanut-unofficial.piko.ml/" rel = "noreferrer" target = "blank"><li><button>비공식 사이트 가기</button></li></a>)}
+							<Link to = '/login'><li><button className = "button" style = {style}>로그인</button></li></Link>
+							{easterEgg > 1 ? (<a href = "https://discord.gg/Cp5jduJZMn" target = "blank"><button className = "button">팀 땅콩 유저 커뮤니티</button></a>)
+							:(<a href = "https://team-peanut-unofficial.piko.ml/" rel = "noreferrer" target = "blank"><li><button className = "button">비공식 사이트 가기</button></li></a>)}
 							</ul>
 						</div>
 						<div className="image">
@@ -148,7 +151,7 @@ const Introduce = () => {
 										<h3>파랑 - Back</h3>
 										<p>치노를 좋아하는 10덕입니다</p>
 										<ul className = "actions fixed">
-											<li><span className = "button small">Details</span></li>
+											<li><span className = "button small">{teamButton}</span></li>
 										</ul>
 									</div>
 								</article>
@@ -166,7 +169,7 @@ const Introduce = () => {
 								</article>
 								<article>
 									<a href="images/gallery/fulls/01.jpg" className = "image">
-										<img src="https://cdn.discordapp.com/avatars/727486102587310102/f4a4d45699340eadb24645e7c1e6787e.webp?size=128" alt="" />
+										<img src="https://cdn.discordapp.com/avatars/727486102587310102/c53e5aeaf0b849d9417092292b0e95cf.webp?size=256" alt="" />
 									</a>
 									<div className = "caption">
 										<p className = "PM" style = {{color : "gold"}}>냐코(PM) - Design</p>
