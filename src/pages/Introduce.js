@@ -144,7 +144,7 @@ const Introduce = () => {
 							<div className = "gallery style2 medium onscroll-fade-in">
 								
 								<article >
-									<a href="images/gallery/fulls/01.jpg" className = "image">
+									<a href="https://github.com/pikokr" className = "image">
 										<img src="https://cdn.discordapp.com/avatars/628595345798201355/a_981b316e32a0945fe327b506dcb72a11.gif?size=256" alt="" />
 									</a>
 									<div className = "caption">
@@ -156,7 +156,7 @@ const Introduce = () => {
 									</div>
 								</article>
 								<article >
-									<a href="images/gallery/fulls/01.jpg" className="image">
+									<a href="https://github.com/cropMr" className="image">
 										<img src="https://imgur.com/M0KveU6.jpg" alt="" />
 									</a>
 									<div className ="caption">

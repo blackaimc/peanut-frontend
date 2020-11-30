@@ -6,7 +6,7 @@ import Button from '../common/Button';
 
 const AuthFormBlock = styled.div`
   .h3-block {
-    text-decoration: none;
+    text-decoration: underline;
     margin: 0;
     color: ${palette.gray[8]};
     margin-bottom: 1rem;
@@ -17,10 +17,10 @@ const AuthFormBlock = styled.div`
  * 스타일링된 input
  */
 const StyledInput = styled.input`
-font-family: 'HangeulNuri-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/HangeulNuri-Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'HangeulNuri-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/HangeulNuri-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
   text-decoration: none;
   font-size: 1rem;
   border: none;
