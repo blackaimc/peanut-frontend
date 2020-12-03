@@ -168,7 +168,7 @@ const Introduce = () => {
 									</div>
 								</article>
 								<article>
-									<a href="images/gallery/fulls/01.jpg" className = "image">
+									<a href="https://github.com/nyaco0125" className = "image">
 										<img src="https://cdn.discordapp.com/avatars/727486102587310102/c53e5aeaf0b849d9417092292b0e95cf.webp?size=256" alt="" />
 									</a>
 									<div className = "caption">
@@ -180,7 +180,7 @@ const Introduce = () => {
 									</div>
 								</article>
 								<article>
-									<a href="images/gallery/fulls/01.jpg" className = "image" onMouseEnter = {() => gobin = true} onMouseLeave = {() => gobin = false}>
+									<button onClick = {() => alert("깃헙 계정이 읎어요")} onMouseEnter = {() => gobin = true} onMouseLeave = {() => gobin = false}>
 										{
 											gobin === true ? (
 												<img src = "https://cdn.discordapp.com/avatars/761220557160579102/38401cf0f5dfe3d08c66d5a8599e1768.webp?size=256" alt = "꼬빈 평상시"/>
@@ -188,7 +188,7 @@ const Introduce = () => {
 												<img src = "https://cdn.discordapp.com/avatars/761220557160579102/94d3883c7d49f9bbcca6d8e03726f0c1.webp?size=256" alt = "꼬빈 각성"/>
 											)
 										}
-									</a>
+									</button>
 									<div className = "caption">
 										<h3>버그 - Design</h3>
 										<p>이 프사 바퀴벌레 얼굴임 ㅅㄱ~</p>
